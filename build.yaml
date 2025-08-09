@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: nice60
+  - board: nrf52840_m2
     shield: mykbd
