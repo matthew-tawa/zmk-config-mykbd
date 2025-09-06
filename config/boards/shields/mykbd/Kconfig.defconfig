@@ -3,4 +3,14 @@ if SHIELD_MYKBD
 config ZMK_KEYBOARD_NAME
     default "mykbd"
 
-endif
+endif # SHIELD_MBKBD
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
