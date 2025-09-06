@@ -4,7 +4,7 @@
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
-        zmk,backlight = &backlight;
+        //zmk,backlight = &backlight;
     };
 
     default_kscan: kscan {
