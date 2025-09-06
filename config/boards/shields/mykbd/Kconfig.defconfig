@@ -3,7 +3,7 @@ if SHIELD_MYKBD
 config ZMK_KEYBOARD_NAME
     default "mykbd"
 
-endif # SHIELD_MBKBD
+endif # SHIELD_MYKBD
 
 if ZMK_BACKLIGHT
 
