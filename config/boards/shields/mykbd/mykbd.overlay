@@ -76,6 +76,20 @@
             gpios = <&gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
+
+    encoder1: encoder1 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder1>;
+        triggers-per-rotation = <9>;
+    }
 };
 
 &pinctrl {
@@ -98,4 +112,8 @@
     pinctrl-0 = <&pwm0_default>;
     pinctrl-1 = <&pwm0_sleep>;
     pinctrl-names = "default", "sleep";
+};
+
+&encoder1 {
+    status = "okay";
 };
