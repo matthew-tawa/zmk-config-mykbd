@@ -120,7 +120,7 @@
     // *****
     // ENCODER
     // *****
-    encoder1: encoder1 {
+    encoder_right: encoder_right {
         compatible = "alps,ec11";
         a-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
         b-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
@@ -130,7 +130,7 @@
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder1>;
+        sensors = <&encoder_right>;
         triggers-per-rotation = <9>;
     };
 
@@ -158,6 +158,6 @@
     pinctrl-names = "default", "sleep";
 };
 
-&encoder1 {
+&encoder_right {
     status = "okay";
 };

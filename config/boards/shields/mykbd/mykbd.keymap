@@ -35,7 +35,7 @@
                 &kp LCTRL &kp LGUI &kp LALT &kp SPACE &kp RALT &kp RGUI &kp LEFT &kp DOWN &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp R L>;
         };
 
         bt_layer {
