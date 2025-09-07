@@ -68,6 +68,33 @@
     };
 
     // *****
+    // CAPS LOCK LED
+    // *****
+     aliases {
+        led-caps = &led_0;
+        //led-num = &led_1;
+        //led-scroll = &led_2;
+        //led-layer = &led_3;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led_0: led_0 {
+            gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+        };
+        /*led_1: led_1 {
+            gpios = <&blackpill 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        led_2: led_2 {
+            gpios = <&blackpill 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        led_3: led_3 {
+            gpios = <&blackpill 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };*/
+    };
+
+    // *****
     // SOFT OFF
     // *****
     keys {
@@ -119,13 +146,6 @@
         triggers-per-rotation = <9>;
     };
 
-    hogs {
-        hog1 {
-            gpio-hog;
-            gpios = <29 GPIO_ACTIVE_HIGH>;
-            output-low;
-        };
-    };
 };
 
 &pinctrl {
@@ -153,14 +173,3 @@
 &encoder1 {
     status = "okay";
 };
-/*
-&gpio0 {
-    status = "okay";
-
-    nrf-led-enable {
-        gpio-hog;
-        gpios = <29 30 31 GPIO_ACTIVE_HIGH>;
-        output-low;
-    };
-};
-*/
