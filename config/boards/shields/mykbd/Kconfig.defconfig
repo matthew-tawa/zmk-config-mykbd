@@ -3,7 +3,12 @@ if SHIELD_MYKBD
 config ZMK_KEYBOARD_NAME
     default "mykbd"
 
-endif # SHIELD_MYKBD
+config LED
+    default y
+
+config LED_LOCK_STATUS
+    bool "Enable LED lock indicators, such as Caps lock, Num Lock ..."
+    default n
 
 if ZMK_BACKLIGHT
 
@@ -14,3 +19,5 @@ config LED_PWM
     default y
 
 endif # ZMK_BACKLIGHT
+
+endif # SHIELD_MYKBD
