@@ -42,7 +42,7 @@
             // T -> &trans = transparent (passes keypress to next active layer)
             // X -> &none  = no binding, (no keycode generated)
             // ------------------------------------------------------------------
-            // | X |   | X | X | X | X | | X | X | X | X | | X | X | X | X || X |
+            // | X |   | X | X | X | X | | X | X | X | X | | X | X | X | X ||TOG|
             // | X |BT0|BT1|BT2|BT3| X | X | X | X | X |CLR| X | X |   X  | | X |
             // | X | X | X | X | X | X | X | X | X | X | X | X | X |  X  |  | X |
             // | X  | X | X | X | X | X | X | X | X | X | X | X | |   X  |  | X |
@@ -51,7 +51,7 @@
             // ------------------------------------------------------------------
 
             bindings = <
-                &none &none &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none &none &bl BL_TOG
                 &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none &none &none &none &bt BT_CLR &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none &none &none
