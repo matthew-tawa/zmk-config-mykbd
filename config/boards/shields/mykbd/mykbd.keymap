@@ -11,12 +11,6 @@
             split-peripheral-off-on-press; // Turn peripheral off immediately for reliability
             hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
         };
-
-        rot_encoder: rot_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp R>, <&kp L>;
-        };
     };
 
     keymap {
@@ -41,7 +35,7 @@
                 &kp LCTRL &kp LGUI &kp LALT &kp SPACE &kp RALT &kp RGUI &kp LEFT &kp DOWN &kp RIGHT
             >;
 
-            sensor-bindings = <&rot_encoder>;
+            sensor-bindings = <&inc_dec_kp R L>;
         };
 
         bt_layer {
@@ -65,7 +59,7 @@
                 &bootloader &sys_reset &none &none &none &none &none &none &none
             >;
 
-            sensor-bindings = <&rot_encoder>;
+            sensor-bindings = <&inc_dec_kp R L>;
         };
     };
 };
