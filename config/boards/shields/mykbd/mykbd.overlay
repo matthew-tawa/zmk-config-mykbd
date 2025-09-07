@@ -77,23 +77,6 @@
         //led-layer = &led_3;
     };
 
-    leds {
-        compatible = "gpio-leds";
-        status = "okay";
-        led_0: led_0 {
-            gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-        };
-        /*led_1: led_1 {
-            gpios = <&blackpill 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-        led_2: led_2 {
-            gpios = <&blackpill 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-        led_3: led_3 {
-            gpios = <&blackpill 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };*/
-    };
-
     // *****
     // SOFT OFF
     // *****
@@ -173,3 +156,20 @@
 &encoder1 {
     status = "okay";
 };
+
+leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led_0: led_0 {
+            gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+        };
+        /*led_1: led_1 {
+            gpios = <&blackpill 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        led_2: led_2 {
+            gpios = <&blackpill 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        led_3: led_3 {
+            gpios = <&blackpill 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };*/
+    };
