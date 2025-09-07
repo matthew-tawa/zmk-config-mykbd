@@ -5,6 +5,7 @@
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
         zmk,backlight = &backlight;
+        zmk,battery = &vbatt;
     };
 
     // *****
@@ -134,6 +135,16 @@
         triggers-per-rotation = <20>;
     };
 
+    // *****
+    // BATTERY SENSE
+    // *****
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        status="okay";
+        io-channels = <&adc 3>;
+        output-ohms = <10000000>;
+        full-ohms = <14020000>;
+    };
 };
 
 &pinctrl {
