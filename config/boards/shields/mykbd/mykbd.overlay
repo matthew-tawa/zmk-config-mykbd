@@ -110,7 +110,7 @@
         a-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
         b-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
         steps = <18>;
-        status = "disabled";
+        //status = "disabled";
     };
 
     sensors: sensors {
@@ -144,4 +144,16 @@
 
 &encoder1 {
     status = "okay";
+};
+
+&gpio0 {
+    status = "okay";
+
+    nrf-led-enable {
+        gpio-hog;
+        gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>,
+                <&gpio0 30 GPIO_ACTIVE_HIGH>,
+                <&gpio0 31 GPIO_ACTIVE_HIGH>;
+        output-low;
+    };
 };
