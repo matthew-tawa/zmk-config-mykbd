@@ -75,8 +75,8 @@
         led-caps = &led_caps; // caps lock indicator LED
         
         led-red = &led_r; // nRF52840 RGB red
-        led-grn = &led_g; // nRF52840 RGB green
-        led-blu = &led_b; // nRF52840 RGB blue
+        led-green = &led_g; // nRF52840 RGB green
+        led-blue = &led_b; // nRF52840 RGB blue
     };
 
     leds {
