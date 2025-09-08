@@ -69,17 +69,31 @@
     };
 
     // *****
-    // CAPS LOCK LED
+    // INDIVIDUAL LEDS
     // *****
-     aliases {
-        led-caps = &led_0;
+    aliases {
+        led-caps = &led_caps; // caps lock indicator LED
+        
+        led-red = &led_r; // nRF52840 RGB red
+        led-blu = &led_g; // nRF52840 RGB green
+        led-grn = &led_b; // nRF52840 RGB blue
     };
 
     leds {
         compatible = "gpio-leds";
         status = "okay";
-        led_0: led_0 {
+
+        led_caps: led_caps {
             gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+        };        
+        led_r: led_r {
+            gpios = <&gpio0 30 GPIO_ACTIVE_HIGH>;
+        };
+        led_g: led_g {
+            gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
+        };
+        led_b: led_b {
+            gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
         };
     };
 
